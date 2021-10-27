@@ -1,65 +1,48 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# To Do list
 
-> One paragraph statement about the project.
+In this project, I built a simple HTML list of To Do tasks. The list is styled according to this [template](https://web.archive.org/web/20180320194056/http://www.getminimalist.com:80/). This simple web page was built using webpack and served by a webpack dev server.
 
-![screenshot](./app_screenshot.png)
-
-Additional description about the project and its features.
+![screenshot](Screenshot(24).png)
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- HTML5
+- CSS3
+- JavaScript
+- Webpack
+- Github
 
 ## Live Demo
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link](https://wes-isaac.github.io/To-do-list/dist/)
+
 
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
 To get a local copy up and running follow these simple example steps.
 
-### Prerequisites
+Clone the repo to your local machine.
 
-### Setup
+git clone https://github.com/Wes-Isaac/To-do-list.git
 
-### Install
-
-### Usage
-
-### Run tests
-
-### Deployment
-
+cd To-do-list
 
 
 ## Authors
 
-👤 **Author1**
+👤 **Yishak**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [Yishak ,Wes-Isaac](https://github.com/Wes-Isaac)
+- LinkedIn: [@Yishak](https://www.linkedin.com/in/yishak-wesego-b404851a7/)
 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/Wes-Isaac/To-do-list/issues).
 
 ## Show your support
 
