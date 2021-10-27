@@ -1,12 +1,51 @@
-import _ from 'lodash';
 import './main.css';
-function component() {
-  const element = document.createElement('div');
 
-  // Lodash, currently included via a script, is required for this line to work
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+const listContainer = document.querySelector('.todo-lists');
+class Todo {
+  constructor(item) {
+    this.item = item;
+  }
 
-  return element;
+  static displayToDo() {
+    const toDoObjectList = [
+      {
+        todoText: 'Do Grocery',
+        completed: false,
+        index: 2,
+      },
+      {
+        todoText: 'Walk the dog',
+        completed: false,
+        index: 1,
+      },
+    ];
+
+    toDoObjectList.sort((a, b) => {
+      const keyA = a.index;
+      const keyB = b.index;
+      if (keyA > keyB) {
+        return 1;
+      }
+      if (keyA < keyB) {
+        return -1;
+      }
+      return 0;
+    });
+
+    const todos = toDoObjectList;
+    todos.forEach((item) => Todo.addToDo(item));
+  }
+
+  static addToDo(item) {
+    listContainer.innerHTML += `<div class="list-container">
+    <span>
+    <input type="checkbox">
+    <p class="items">${item.todoText}</p>
+    </span>
+    <p id="${item.index}"></p>
+    <i class="fas fa-ellipsis-v"></i>
+    </div>`;
+  }
 }
 
-document.body.appendChild(component());
+document.addEventListener('DOMContentLoaded', Todo.displayToDo);
