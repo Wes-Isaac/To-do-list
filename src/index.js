@@ -62,32 +62,6 @@ class Todo {
     </div>`;
     }
   }
-
-  static checkCompleted(id) {
-    const completed = Storage.getTodos();
-    completed.forEach((task) => {
-      if (task.index == id) {
-        task.completed = true;
-      }
-    });
-    Storage.addTodos(completed);
-  }
-
-  static markedCompleted(element) {
-    if (element.checked === true) {
-      element.nextElementSibling.classList.add('checked');
-      Todo.checkCompleted(element.id);
-    } else {
-      element.nextElementSibling.classList.remove('checked');
-      const todo = Storage.getTodos();
-      todo.forEach((task) => {
-        if (task.index == element.id) {
-          task.completed = false;
-        }
-      });
-      Storage.addTodos(todo);
-    }
-  }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -96,6 +70,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 document.querySelector('.todo-lists').addEventListener('click', (e) => {
   if (e.target.classList.contains('checkbox')) {
-    Todo.markedCompleted(e.target);
+    Storage.markedCompleted(e.target);
   }
 });

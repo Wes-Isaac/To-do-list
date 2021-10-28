@@ -13,6 +13,58 @@ class Storage {
   static addTodos(todo) {
     localStorage.setItem('tasks', JSON.stringify(todo));
   }
+
+  static checkCompleted(id) {
+    const completed = Storage.getTodos();
+    completed.forEach((task) => {
+      if (task.index == id) {
+        task.completed = true;
+      }
+    });
+    Storage.addTodos(completed);
+  }
+
+  static markedCompleted(element) {
+    if (element.checked === true) {
+      element.nextElementSibling.classList.add('checked');
+      Storage.checkCompleted(element.id);
+    } else {
+      element.nextElementSibling.classList.remove('checked');
+      const todo = Storage.getTodos();
+      todo.forEach((task) => {
+        if (task.index == element.id) {
+          task.completed = false;
+        }
+      });
+      Storage.addTodos(todo);
+    }
+  }
 }
+
+// function checkCompleted(id) {
+//   const completed = Storage.getTodos();
+//   completed.forEach((task) => {
+//     if (task.index == id) {
+//       task.completed = true;
+//     }
+//   });
+//   Storage.addTodos(completed);
+// }
+
+// function markedCompleted(element) {
+//   if (element.checked === true) {
+//     element.nextElementSibling.classList.add('checked');
+//     Todo.checkCompleted(element.id);
+//   } else {
+//     element.nextElementSibling.classList.remove('checked');
+//     const todo = Storage.getTodos();
+//     todo.forEach((task) => {
+//       if (task.index == element.id) {
+//         task.completed = false;
+//       }
+//     });
+//     Storage.addTodos(todo);
+//   }
+// }
 
 export default Storage;
