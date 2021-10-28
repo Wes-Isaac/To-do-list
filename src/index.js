@@ -6,6 +6,7 @@ class Todo {
   constructor(item) {
     this.item = item;
   }
+
   toDoObjectList = [];
 
   static initObject() {
@@ -21,15 +22,13 @@ class Todo {
         index: 1,
       },
     ];
-    
+
     if (!Storage.getTodos().length) {
       Storage.addTodos(this.toDoObjectList);
     }
   }
 
   static displayToDo() {
-  
-
     this.toDoObjectList.sort((a, b) => {
       const keyA = a.index;
       const keyB = b.index;
