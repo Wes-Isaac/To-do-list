@@ -41,30 +41,4 @@ class Storage {
   }
 }
 
-// function checkCompleted(id) {
-//   const completed = Storage.getTodos();
-//   completed.forEach((task) => {
-//     if (task.index == id) {
-//       task.completed = true;
-//     }
-//   });
-//   Storage.addTodos(completed);
-// }
-
-// function markedCompleted(element) {
-//   if (element.checked === true) {
-//     element.nextElementSibling.classList.add('checked');
-//     Todo.checkCompleted(element.id);
-//   } else {
-//     element.nextElementSibling.classList.remove('checked');
-//     const todo = Storage.getTodos();
-//     todo.forEach((task) => {
-//       if (task.index == element.id) {
-//         task.completed = false;
-//       }
-//     });
-//     Storage.addTodos(todo);
-//   }
-// }
-
 export default Storage;
