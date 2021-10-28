@@ -70,6 +70,11 @@ hr {
   border-bottom: 1px solid rgb(131, 127, 127);
 }
 
+.items.checked {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
 .list-container span {
   display: flex;
   align-items: center;
