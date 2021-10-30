@@ -32,6 +32,11 @@ main {
   padding: 6px 12px;
 }
 
+input {
+  outline: none;
+  border: none;
+}
+
 hr {
   color: rgb(131, 127, 127);
   margin: 0;
@@ -68,6 +73,7 @@ hr {
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid rgb(131, 127, 127);
+  padding: 0.2rem 0;
 }
 
 .items.checked {
@@ -75,18 +81,29 @@ hr {
   opacity: 0.5;
 }
 
+.checkbox {
+  margin: 5px;
+}
+
 .list-container span {
   display: flex;
-  align-items: center;
-  margin-left: 27px;
+  justify-content: space-between;
+  width: 95%;
 }
 
-.items {
-  padding-left: 20px;
+.list-container span .items {
+  width: 100%;
+  padding: 13px 0;
 }
 
-.fa-ellipsis-v {
-  margin-right: 27px;
+button {
+  padding: 5px 10px;
+  border: none;
+  background: transparent;
+}
+
+.delete {
+  color: red;
 }
 
 .btn {
@@ -96,4 +113,13 @@ hr {
   padding: 15px 0;
   font-size: 15px;
   color: rgb(131, 127, 127);
+}
+
+.btn .clear {
+  color: rgb(88, 88, 88);
+  text-decoration: none;
+}
+
+.btn .clear:hover {
+  text-decoration: underline;
 }

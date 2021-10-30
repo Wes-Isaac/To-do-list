@@ -1,3 +1,5 @@
+import Store from './addremove.js';
+
 class Storage {
   static getTodos() {
     let todo;
@@ -15,28 +17,28 @@ class Storage {
   }
 
   static checkCompleted(id) {
-    const completed = Storage.getTodos();
+    const completed = Store.getTasks();
     completed.forEach((task) => {
       if (task.index == id) {
         task.completed = true;
       }
     });
-    Storage.addTodos(completed);
+    Store.editTasks(completed);
   }
 
   static markedCompleted(element) {
     if (element.checked === true) {
-      element.nextElementSibling.classList.add('checked');
+      element.nextElementSibling.firstElementChild.classList.add('checked');
       Storage.checkCompleted(element.id);
     } else {
-      element.nextElementSibling.classList.remove('checked');
-      const todo = Storage.getTodos();
+      element.nextElementSibling.firstElementChild.classList.remove('checked');
+      const todo = Store.getTasks();
       todo.forEach((task) => {
         if (task.index == element.id) {
           task.completed = false;
         }
       });
-      Storage.addTodos(todo);
+      Store.editTasks(todo);
     }
   }
 }

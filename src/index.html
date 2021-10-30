@@ -14,12 +14,17 @@
 </div>
 <hr>
     <div class='input-container'>
-        <input type="text" id="myInput" placeholder="Add to your list...">
-        <span class="enterArrow" id="arrow">&#8629;</span>
+        <form action="">
+            <input type="text" id="myInput" placeholder="Add to your list..." required>
+
+        </form>
+        <button class="enterArrow" id="arrow">&#8629;</button>
     </div>
     <hr>
     <div class="todo-lists"></div>
-    <button class="btn">Clear all Completed</button>
+    <button class="btn">
+        <a href="#" class="clear">Clear all Completed</a>
+</button>
 </main>
 </body>
 </html>
