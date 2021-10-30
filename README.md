@@ -24,12 +24,23 @@ In this project, I built a simple HTML list of To Do tasks. The list is styled a
 
 To get a local copy up and running follow these simple example steps.
 
-Clone the repo to your local machine.
+Clone the repo to your local machine. Run this command
 
 git clone https://github.com/Wes-Isaac/To-do-list.git
 
 cd To-do-list
 
+Navigate to To-do-list folder/directory. At the project's root, on the terminal, run 'npm install' to install app dependencies
+
+Next, run 'npm start' which will run the app in the development mode.
+
+Open http://localhost:3000 to view it in the browser.
+
+ALTERNATIVELY
+
+Just run 'npm run build' which will build the project and generate output files into the build directory.
+
+Go to build directory and manually open index.html to interact with the app.
 
 ## Authors
 
