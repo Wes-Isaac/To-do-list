@@ -1,5 +1,3 @@
-// import Todo from './index.js';
-
 class Store {
   static getTasks() {
     let tasks;
