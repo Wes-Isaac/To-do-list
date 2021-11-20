@@ -110,15 +110,16 @@ button {
 
 .btn {
   background-color: rgb(245, 233, 233);
+  background-color: #f38760;
   width: 100%;
   border: none;
   padding: 15px 0;
   font-size: 15px;
-  color: rgb(131, 127, 127);
+  color: rgb(241, 241, 241);
 }
 
 .btn .clear {
-  color: rgb(88, 88, 88);
+  color: rgb(231, 231, 231);
   text-decoration: none;
 }
 
