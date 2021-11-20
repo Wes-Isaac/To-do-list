@@ -16,7 +16,7 @@ In this project, I built a simple HTML list of To Do tasks. The list is styled a
 
 ## Live Demo
 
-[Live Demo Link](https://wes-isaac.github.io/To-do-list/dist/)
+[Live Demo Link](https://wes-isaac.github.io/To-do-list/)
 
 
 
